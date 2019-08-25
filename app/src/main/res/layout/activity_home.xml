@@ -1,0 +1,642 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/darkblue"
+    android:fillViewport="true">
+
+    <android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:orientation="vertical">
+
+        <ViewFlipper
+            android:id="@+id/viewFlipper"
+            android:layout_width="match_parent"
+            android:layout_height="284dp"
+            android:adjustViewBounds="true"
+            android:cropToPadding="true"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageButton
+            android:id="@+id/popupMenuButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="16dp"
+            android:background="@android:color/transparent"
+            android:contentDescription="main menu"
+            android:onClick="showMenu"
+            android:src="@drawable/ic_more_vert_white_24px"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView0"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:foreground="?android:selectableItemBackground"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView5">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_marginEnd="64dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="64dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:drawableLeft="@drawable/ic_info_outline_black"
+                    android:drawablePadding="15dp"
+                    android:gravity="center_vertical"
+                    android:text="@string/info_cara_booking"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_chainStyle="packed" />
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:foreground="?android:selectableItemBackground"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView0">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.stacktips.view.CustomCalendarView
+                    android:id="@+id/calendar_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginRight="8dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    app:calendarBackgroundColor="@color/white"
+                    app:calendarTitleTextColor="@color/oil"
+                    app:currentDayOfMonthColor="@color/oil"
+                    app:dayOfMonthTextColor="@color/oil"
+                    app:dayOfWeekTextColor="@color/oil"
+                    app:disabledDayBackgroundColor="@color/white"
+                    app:disabledDayTextColor="@color/greyed_day_calendar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:selectedDayBackgroundColor="@color/accent_transparent"
+                    app:selectedDayTextColor="@color/oil"
+                    app:titleLayoutBackgroundColor="@color/white"
+                    app:weekLayoutBackgroundColor="@color/white">
+
+                </com.stacktips.view.CustomCalendarView>
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView4">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/hai_username"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:padding="4dp"
+                    android:text="@string/hai"
+                    android:textAlignment="center"
+                    android:textColor="@color/oil"
+                    android:textSize="16sp"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_conversion_absoluteHeight="41dp"
+                    tools:layout_conversion_absoluteWidth="160dp"
+                    tools:layout_conversion_absoluteX="20dp"
+                    tools:layout_conversion_absoluteY="379dp" />
+
+                <TextView
+                    android:id="@+id/depositText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="12dp"
+                    android:padding="4dp"
+                    android:text="@string/deposit"
+                    android:textAlignment="center"
+                    android:textColor="@color/oil"
+                    android:textSize="24sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/hai_username"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:layout_conversion_absoluteHeight="36dp"
+                    tools:layout_conversion_absoluteWidth="160dp"
+                    tools:layout_conversion_absoluteX="180dp"
+                    tools:layout_conversion_absoluteY="380dp" />
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView4"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView6">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="1"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/imgMaps"
+                    android:padding="8dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="0.5"
+                    app:srcCompat="@drawable/iconmaps1" />
+
+                <ImageView
+                    android:id="@+id/imgKontak"
+                    android:padding="8dp"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_weight="0.5"
+                    app:srcCompat="@drawable/iconkontak1" />
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView5"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="293dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/deskText"
+                    android:layout_width="0dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center_vertical"
+                    android:text="Lura Futsal"
+                    android:textStyle="bold"
+                    android:textColor="@color/oil"
+                    android:textSize="20sp"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_conversion_absoluteHeight="41dp"
+                    tools:layout_conversion_absoluteWidth="160dp"
+                    tools:layout_conversion_absoluteX="20dp"
+                    tools:layout_conversion_absoluteY="379dp" />
+
+                <ImageView
+                    android:id="@+id/deskText1"
+                    android:layout_width="70dp"
+                    android:layout_height="25dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="8dp"
+                    android:padding="1dp"
+                    android:src="@drawable/rating"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.056"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/deskText"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:layout_conversion_absoluteHeight="36dp"
+                    tools:layout_conversion_absoluteWidth="160dp"
+                    tools:layout_conversion_absoluteX="180dp"
+                    tools:layout_conversion_absoluteY="380dp" />
+
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView6"
+            android:layout_width="0dp"
+            android:layout_height="95dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:foreground="?android:attr/selectableItemBackground"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView7">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/deskText2"
+                    android:layout_width="0dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center_vertical"
+                    android:text="Fasilitas"
+                    android:textStyle="bold"
+                    android:textColor="@color/oil"
+                    android:textSize="16sp"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_conversion_absoluteHeight="41dp"
+                    tools:layout_conversion_absoluteWidth="160dp"
+                    tools:layout_conversion_absoluteX="20dp"
+                    tools:layout_conversion_absoluteY="379dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/monsoon"
+                    app:layout_constraintBottom_toBottomOf="@+id/deskText2"
+                    app:layout_constraintTop_toBottomOf="@id/deskText2"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    tools:layout_conversion_absoluteHeight="4dp"
+                    tools:layout_conversion_absoluteWidth="160dp"
+                    tools:layout_conversion_absoluteX="20dp"
+                    tools:layout_conversion_absoluteY="379dp" />
+
+                <TextView
+                    android:id="@+id/deskText3"
+                    android:layout_width="100dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center_vertical"
+                    android:text="• Tempat Parkir"
+
+                    android:textColor="@color/oil"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.056"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/deskText2"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:layout_conversion_absoluteHeight="36dp"
+                    tools:layout_conversion_absoluteWidth="160dp"
+                    tools:layout_conversion_absoluteX="180dp"
+                    tools:layout_conversion_absoluteY="380dp" />
+
+                <TextView
+                    android:id="@+id/deskText4"
+                    android:layout_width="100dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center_vertical"
+                    android:text="• Toilet"
+
+                    android:textColor="@color/oil"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.056"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/deskText3"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:layout_conversion_absoluteHeight="36dp"
+                    tools:layout_conversion_absoluteWidth="160dp"
+                    tools:layout_conversion_absoluteX="180dp"
+                    tools:layout_conversion_absoluteY="380dp" />
+
+                <TextView
+                    android:id="@+id/deskText5"
+                    android:layout_width="0dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="right"
+                    android:text="• Mushola"
+                    android:textColor="@color/oil"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.056"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/deskText2"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:layout_conversion_absoluteHeight="36dp"
+                    tools:layout_conversion_absoluteWidth="160dp"
+                    tools:layout_conversion_absoluteX="180dp"
+                    tools:layout_conversion_absoluteY="380dp"/>
+
+                <TextView
+                    android:id="@+id/deskText6"
+                    android:layout_width="0dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="right"
+                    android:text="• Kantin    "
+
+                    android:textColor="@color/oil"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.056"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/deskText3"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:layout_conversion_absoluteHeight="36dp"
+                    tools:layout_conversion_absoluteWidth="160dp"
+                    tools:layout_conversion_absoluteX="180dp"
+                    tools:layout_conversion_absoluteY="380dp"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v7.widget.CardView>
+
+        <android.support.v7.widget.CardView
+            android:id="@+id/cardView7"
+            android:layout_width="0dp"
+            android:layout_height="95dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:foreground="?android:selectableItemBackground"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cardView1">
+
+            <android.support.constraint.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:id="@+id/deskText8"
+                    android:layout_width="0dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center_vertical"
+                    android:text="Tarif"
+                    android:textStyle="bold"
+                    android:textColor="@color/oil"
+                    android:textSize="16sp"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:layout_conversion_absoluteHeight="41dp"
+                    tools:layout_conversion_absoluteWidth="160dp"
+                    tools:layout_conversion_absoluteX="20dp"
+                    tools:layout_conversion_absoluteY="379dp" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_margin="10dp"
+                    android:layout_marginBottom="4dp"
+                    android:background="@color/monsoon"
+                    app:layout_constraintBottom_toBottomOf="@+id/deskText8"
+                    app:layout_constraintTop_toBottomOf="@id/deskText8"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    tools:layout_conversion_absoluteHeight="4dp"
+                    tools:layout_conversion_absoluteWidth="160dp"
+                    tools:layout_conversion_absoluteX="20dp"
+                    tools:layout_conversion_absoluteY="379dp" />
+
+                <TextView
+                    android:id="@+id/deskText9"
+                    android:layout_width="105dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center_vertical"
+                    android:textStyle=""
+                    android:text="• 09.00 - 17.00       :"
+                    android:textColor="@color/oil"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.056"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/deskText8"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:layout_conversion_absoluteHeight="36dp"
+                    tools:layout_conversion_absoluteWidth="160dp"
+                    tools:layout_conversion_absoluteX="180dp"
+                    tools:layout_conversion_absoluteY="380dp" />
+
+                <TextView
+                    android:id="@+id/deskText10"
+                    android:layout_width="105dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="center_vertical"
+                    android:text="• 18.00 - 23.59       :"
+                    android:textColor="@color/oil"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.056"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/deskText9"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:layout_conversion_absoluteHeight="36dp"
+                    tools:layout_conversion_absoluteWidth="160dp"
+                    tools:layout_conversion_absoluteX="180dp"
+                    tools:layout_conversion_absoluteY="380dp" />
+
+                <TextView
+                    android:id="@+id/deskText11"
+                    android:layout_width="0dp"
+                    android:layout_height="23dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="right"
+                    android:text="Rp.75.000"
+                    android:textColor="@color/oil"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.056"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/deskText8"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:layout_conversion_absoluteHeight="36dp"
+                    tools:layout_conversion_absoluteWidth="160dp"
+                    tools:layout_conversion_absoluteX="180dp"
+                    tools:layout_conversion_absoluteY="380dp" />
+
+                <TextView
+                    android:id="@+id/deskText12"
+                    android:layout_width="0dp"
+                    android:layout_height="24dp"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginTop="7dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:gravity="right"
+                    android:text="Rp.140.000"
+                    android:textColor="@color/oil"
+                    android:textSize="12sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintHorizontal_bias="0.056"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/deskText9"
+                    app:layout_constraintVertical_bias="0.0"
+                    tools:layout_conversion_absoluteHeight="36dp"
+                    tools:layout_conversion_absoluteWidth="160dp"
+                    tools:layout_conversion_absoluteX="180dp"
+                    tools:layout_conversion_absoluteY="380dp"/>
+
+            </android.support.constraint.ConstraintLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </android.support.constraint.ConstraintLayout>
+
+</ScrollView>

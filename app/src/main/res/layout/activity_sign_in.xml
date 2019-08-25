@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/backgroundutama"
+    android:id="@+id/activity_login"
+    tools:context=".SignInActivity">
+
+        <ImageView
+            android:src="@drawable/logoapp"
+            android:layout_width="match_parent"
+            android:layout_height="140sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:layout_gravity="center_horizontal" />
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+            <AutoCompleteTextView
+                android:id="@+id/emailField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Email"
+                android:inputType="textEmailAddress"
+                android:maxLines="1"
+                android:singleLine="true" />
+        </android.support.design.widget.TextInputLayout>
+
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+            <EditText
+                android:id="@+id/passwordField"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Password"
+                android:imeActionId="6"
+                android:imeActionLabel="Password"
+                android:imeOptions="actionUnspecified"
+                android:inputType="textPassword"
+                android:maxLines="1"
+                android:singleLine="true"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/buttonMasuk"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="24dp"
+            android:padding="12dp"
+            android:background="@drawable/btn_bg"
+            android:text="Login Now"/>
+
+    <Button
+        android:id="@+id/btn_lupapwd"
+        android:layout_width="fill_parent"
+        android:layout_height="17dp"
+        android:layout_marginBottom="21dp"
+        android:background="@null"
+        android:gravity="center"
+        android:text="Forgot password ?"
+        android:textSize="12dp" />
+
+    <Button
+        android:id="@+id/buttonDaftar"
+        android:layout_width="fill_parent"
+        android:layout_height="17dp"
+        android:background="@null"
+        android:gravity="center"
+        android:text="No account yet? Create one"
+        android:textSize="12dp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="left|bottom"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="113dp"
+        tools:layout_editor_absoluteY="100dp" />
+
+
+</LinearLayout>

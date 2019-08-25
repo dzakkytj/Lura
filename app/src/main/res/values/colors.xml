@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+
+
+    <color name="primary_light">#bef67a</color>
+    <color name="accent_transparent">#F4FF81</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#ECEFF1</color>
+
+    <color name="gray">#ECEFF1</color>
+    <color name="background">#8BC34A</color>
+    <color name="greyed_day_calendar">#CFD8DC</color>
+
+
+    <color name="primary">#941718</color>
+    <color name="primary_dark">#941718</color>
+    <color name="primary_darker">#941718</color>
+    <color name="accent">#ff3d3d</color>
+
+    <color name="colorTransparan">#00000000</color>
+
+    <color name="colorPutih">#ffffff</color>
+    <color name="colorHitam">#000000</color>
+
+    <color name="colorMerah">#d00229</color>
+    <color name="colorMerahdark">#9b022a</color>
+    <color name="colorMerahHati">#860b0b</color>
+    <color name="colorlogo">#fa2019</color>
+
+    <color name="black">#000000</color>
+    <color name="jet">#222222</color>
+    <color name="oil">#333333</color>
+    <color name="monsoon">#777777</color>
+    <color name="jumbo">#888888</color>
+    <color name="aluminum">#999999</color>
+    <color name="base">#AAAAAA</color>
+    <color name="iron">#CCCCCC</color>
+    <color name="white">#FFFFFF</color>
+
+
+    <color name="backgroundcolor">#fcfcfc</color>
+
+    <color name="deeppurple">#bef67a</color>
+    <color name="yello">#ffb300</color>
+    <color name="green">#00bfa5</color>
+
+    <color name="darkblue">#07151e</color>
+    <color name="testcolorblue">#152b38</color>
+    <color name="pink">#fc7671</color>
+
+    <color name="black_overlay">#66000000</color>
+    <color name="lightgray">#ededed</color>
+
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorWhite">#FFFFFF</color>
+
+</resources>
